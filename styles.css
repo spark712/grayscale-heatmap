@@ -1,0 +1,431 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
+License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* Root */
+
+:root {
+    --bottom: #b0b0b0;
+    --mid: #787878;
+    --top: #545454;
+    --border: #a0a0a0;
+}
+
+
+/* Body */
+
+body {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+ul li,
+.article,
+.sub-article,
+.main-article {
+    border: 5px solid var(--border);
+    border-radius: 4px;
+}
+
+
+/* Images */
+
+.authr-img {
+    height: 150px;
+    width: 150px;
+    background: var(--top);
+    float: left;
+    border: 5px solid black;
+    border-radius: 10px;
+    transform: rotate(-26deg);
+    transform-origin: 0% 89%;
+    transition: all 0.5s;
+}
+
+.authr-img:hover {
+    transform: rotate(0);
+}
+
+.img {
+    width: 150px;
+    height: 150px;
+    background: var(--mid);
+    border-radius: 50%;
+    border: 5px solid black;
+}
+
+
+/* Header */
+
+.main-header .nav-top ul,
+.main-header .nav-bottom ul {
+    display: flex;
+    background: var(--bottom);
+    align-items: flex-end;
+    padding: 2.5px 20px;
+}
+
+ul li {
+    width: 100px;
+    height: 20px;
+    background: var(--top);
+    margin: 5px;
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    flex: 1;
+}
+
+ul .logo {
+    height: 30px;
+    width: 200px;
+    border: 5px solid black;
+    line-height: 1.5;
+}
+
+ul .srch input {
+    height: 30px;
+    width: 200px;
+    padding: 10px;
+    margin: 5px;
+    border: 5px solid black;
+    border-radius: 4px;
+}
+
+
+/* Section */
+
+.section {
+    margin-top: 40px;
+}
+
+
+/* Articles */
+
+.part1-top {
+    display: flex;
+    margin: 10px 70px;
+    /* width: 100%; */
+    align-items: center;
+}
+
+.main-article .article-head {
+    background: var(--mid);
+    float: left;
+    width: 70%;
+    padding: 5px;
+    font-size: 2rem;
+}
+
+.main-article .article-summary {
+    clear: both;
+    font-size: 1.3rem;
+}
+
+.sub-article .article-head,
+.article .article-head {
+    background: var(--mid);
+    float: left;
+    width: 70%;
+    padding: 5px;
+    font-size: 1.5rem;
+}
+
+.sub-article .article-summary,
+.article .article-summary {
+    clear: both;
+    font-size: 1rem;
+}
+
+.right {
+    /* position: relative; */
+    background: var(--bottom);
+    border: 5px solid var(--border);
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+    font-size: 1.1rem;
+}
+
+.right .img {
+    position: relative;
+    top: -80px;
+    margin: 0 auto;
+}
+
+.right .upper {
+    margin: 10px auto;
+}
+
+.right .upper h2 {
+    font-size: 1.3rem;
+    background: var(--mid);
+    padding: 10px 0;
+    margin: 20px 0;
+}
+
+.right .lower {
+    margin: 10px auto;
+    padding: 10px 0 40px 0;
+}
+
+.main-article,
+.sub-article,
+.article {
+    background: var(--bottom);
+    padding: 10px;
+    margin: 10px;
+}
+
+.main-article>*,
+.sub-article>*,
+.article>* {
+    margin: 10px 10px 10px 0px;
+}
+
+.main-article .authr-img {
+    height: 125px;
+    width: 125px;
+}
+
+.article .authr-img {
+    height: 100px;
+    width: 100px;
+}
+
+.sub-article .authr-img {
+    height: 75px;
+    width: 75px;
+}
+
+
+/* Part-2  and part-3*/
+
+.posts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px 70px;
+}
+
+.posts .sub-article {
+    flex-basis: 45%;
+}
+
+
+/* Guides */
+
+.guides {
+    /* border: 5px solid var(--border); */
+    border-radius: 5px;
+    background: var(--top);
+    padding: 50px 90px;
+    margin: 20px 0 50px 0;
+    display: flex;
+}
+
+.guide {
+    flex: 1;
+    border: 5px solid var(--border);
+    border-radius: 5px;
+    background: var(--bottom);
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.guide-head {
+    background: var(--mid);
+    font-size: 1.8rem;
+}
+
+.guide-body {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0 40px 0;
+    font-size: 1.1rem;
+}
+
+.btn button {
+    background: var(--top);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    padding: 5px;
+    width: 80%;
+    border-radius: 5px;
+}
+
+
+/* Footer */
+
+.main-footer {
+    background: var(--bottom);
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.main-footer .links ul {
+    margin: 0px 200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-footer .links ul li {
+    flex-basis: 200px;
+}
+
+.main-footer .links h1 {
+    width: 500px;
+    font-size: 50px;
+    margin: 0 auto;
+}
+
+.main-footer .links p {
+    width: 500px;
+    margin: 50px auto;
+}
